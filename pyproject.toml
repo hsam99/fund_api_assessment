@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "funds_api"
+version = "0.1.0"
+description = "A REST API for CRUD operations on fund data."
+dependencies = [
+    "flask==3.0.3",
+    "jsonschema==4.22.0"
+]
+
+[tool.setuptools.packages]
+find = { include = ["funds_api*"] }

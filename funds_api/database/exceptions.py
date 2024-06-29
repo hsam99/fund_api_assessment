@@ -1,0 +1,2 @@
+class InvalidFundDataInput(RuntimeError):
+    pass
