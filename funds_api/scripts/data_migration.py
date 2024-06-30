@@ -52,6 +52,7 @@ def _validate_data(fund: dict):
 @click.option('--host', default='127.0.0.1', help='MySQL host.')
 @click.option('--port', default=3306, help='MySQL port.')
 def main(user, password, host, port):
+    """Insert data from local database to MySQL server."""
     # Read local database data.
     local_database = JsonDb()
     local_database.connect(DATA_FILE)
@@ -103,8 +104,6 @@ def main(user, password, host, port):
         print(f"Inserted {insert_count} records.")
     
     except mysql.connector.Error as err:
-        import pdb
-        pdb.set_trace()
         if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
             print("Something is wrong with your user name or password")
         elif err.errno == errorcode.ER_BAD_DB_ERROR:

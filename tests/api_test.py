@@ -207,8 +207,7 @@ def test_create_new_fund_with_invalid_fund_data(client, mock_db):
 def test_delete_fund(client, mock_db):
     """Test delete fund endpoint."""
     response = client.delete('/funds/1001')
-    assert response.status_code == 200
-    assert response.json == ''
+    assert response.status_code == 204
     assert 1001 not in mock_db._data
 
 

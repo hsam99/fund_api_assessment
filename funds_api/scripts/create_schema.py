@@ -9,6 +9,7 @@ from mysql.connector import errorcode
 @click.option('--host', default='127.0.0.1', help='MySQL host.')
 @click.option('--port', default=3306, help='MySQL port.')
 def main(user, password, host, port):
+    """Create the `funds` table in `fund_db` database in MySQL server."""
     # Database connection configuration.
     config = {
         'user': user,

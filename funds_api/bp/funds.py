@@ -8,6 +8,7 @@ from funds_api.services import exceptions, services
 bp = Blueprint('funds', __name__)
 HTTP_OK_CODE = 200
 HTTP_CREATED_CODE = 201
+HTTP_NO_CONTENT_CODE = 204
 HTTP_INPUT_ERROR_CODE = 400
 HTTP_NOT_FOUND_CODE = 404
 
@@ -63,4 +64,4 @@ def delete_fund(fund_id):
     except exceptions.NotFoundError as exc:
         return jsonify({'error': str(exc)}), HTTP_NOT_FOUND_CODE
 
-    return jsonify(response), HTTP_OK_CODE
+    return jsonify(response), HTTP_NO_CONTENT_CODE
