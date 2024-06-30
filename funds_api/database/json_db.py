@@ -4,6 +4,7 @@ from .base import AbstractDb
 
 
 class JsonDb(AbstractDb):
+    """Database abstraction to connect to a JSON file."""
     def __init__(self):
         self._data = {}
 

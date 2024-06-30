@@ -224,7 +224,7 @@ In the project's root directory, execute the following steps.
 ```
 
 
-### 5. Run the follow for flask app help
+### 5. Run the following for flask app help
 
 ```bash
 > flask --app funds_api --help
